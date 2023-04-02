@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/*
+#root {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}*/
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 48px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+p, a {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+li {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.navigation {
+  position: relative;
+}
+
+.dashboard {
+  background-color: aquamarine;
+  position: absolute;
+  top: 10%;
+  left: 120px;
+  padding-left: 30px;
+}
+
+.nav-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+  background-color: #020203;
+}
+.nav-horizontal .nav-logo {
+  width: 20%;
+  padding-left: 3%;
+}
+.nav-horizontal .nav-item {
+  margin: 0;
+  color: white;
+  width: 80%;
+  padding: 0 3% 0 5%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 120px;
+  height: 100vh;
+  background-color: #020203;
+}
+.nav-vertical .nav-icons {
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+.nav-vertical .nav-text {
+  font-size: 12px;
+  color: white;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.bloc-icon {
+  width: 65px;
+  height: 65px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+}
+
+.section-userdata {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-data {
+  background-color: #FBFBFB;
+  width: 210px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 25px 20px;
+  margin-bottom: 20px;
+}
+.user-data .data-icon {
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(229, 229, 253);
+  margin-right: 30px;
+}
+.user-data .data-icon .bloc-icon {
+  background-color: transparent;
+}
+.user-data .data-icon .name-icon {
+  width: 50%;
+}
+.user-data .data-infos h2 {
+  margin: 0;
+}
+.user-data .data-infos span {
+  font-weight: 500;
+  color: #74798C;
+  font-size: 14px;
+  margin: 5px 0 0 0;
+}/*# sourceMappingURL=index.css.map */

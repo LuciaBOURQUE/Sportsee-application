@@ -1,0 +1,11 @@
+@import "./base/general";
+@import "./base/typography";
+
+// Components list
+@import "./components/dashboard";
+@import "./components/nav";
+@import "./components/icon";
+@import "./components/userdata";
+@import "./components/barchart";
+
+@import "./utils/variables"
