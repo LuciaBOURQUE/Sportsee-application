@@ -1,10 +1,27 @@
 .navigation {
     position: relative;
-}
-.dashboard {
-    background-color: aquamarine;
+  }
+  .dashboard {
+    //background-color: aquamarine;
     position: absolute;
     top: 10%;
     left: 120px;
     padding-left: 30px;
-}
+    .user h1 {
+      margin-bottom: 0;
+    }
+  }
+  
+  .dashboard__graphics {
+    display: flex;
+  }
+  
+  .dashboard__recharts {
+    margin-right: 3%;
+    display: flex;
+    flex-direction: column;
+    &__blocs {
+      display: flex;
+      justify-content: space-between;
+    }
+  }

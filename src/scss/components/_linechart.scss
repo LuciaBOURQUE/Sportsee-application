@@ -1,0 +1,40 @@
+.linechart {
+  background-color: #ff0000;
+  border-radius: 5px;
+  padding: 20px;
+  width: fit-content;
+  .legend-linechart h3 {
+    color: rgba(255, 255, 255, 0.5);
+    width: 60%;
+    font-weight: 300;
+  }
+}
+
+// Paramètres des éléments du graphique
+.recharts-wrapper {
+  margin: 0px;
+}
+
+.recharts-line-curve {
+  fill: none;                 
+  stroke: url(#colorUv);    
+}
+.recharts-layer circle {
+  fill: none;
+  stroke: none;
+  cursor: pointer;
+}
+.recharts-cartesian-axis-line, .recharts-cartesian-axis-tick-line {
+  stroke: transparent;
+}
+
+// au survol ou click
+.recharts-tooltip-cursor {
+  stroke: transparent;
+}
+.recharts-active-dot .recharts-dot{
+  fill: white;
+  stroke: white;
+}
+
+

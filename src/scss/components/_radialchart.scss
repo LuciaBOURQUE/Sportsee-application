@@ -1,0 +1,22 @@
+.radialchart {
+  background-color: #cde5f8;
+  border-radius: 5px;
+  padding: 20px;
+  width: fit-content;
+}
+/*
+.radialchart-graphic {
+  position:absolute;
+}*/
+.radialchart-info {
+  //position: relative;
+  //top: center;
+  //left: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  span {
+    font-size: 24px;
+    font-weight: bold;
+  }
+}

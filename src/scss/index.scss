@@ -6,6 +6,11 @@
 @import "./components/nav";
 @import "./components/icon";
 @import "./components/userdata";
-@import "./components/barchart";
+@import "./components/tooltip";
 
-@import "./utils/variables"
+@import "./components/barchart";
+@import "./components/linechart";
+@import "./components/radarchart";
+@import "./components/radialchart";
+
+@import "./utils/variables";

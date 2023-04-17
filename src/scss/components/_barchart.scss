@@ -1,0 +1,27 @@
+.barchart {
+    background-color: #fbfbfb;
+    margin-bottom: 3%;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .legend-barchart {
+    display: flex;
+    justify-content: space-between;
+    .poids-calories {
+      display: flex;
+      .poids,
+      .calories {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        span {
+          font-size: 14px;
+          margin: 0;
+          padding-left: 10px;
+          color: #74798c;
+        }
+      }
+    }
+  }
+  

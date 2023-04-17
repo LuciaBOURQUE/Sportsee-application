@@ -1,5 +1,5 @@
 import "../../scss/index.scss"
-// Créer ici le PropTypes
+import PropTypes from "prop-types"
 
 export default function User({ nameValue }) {
   return (
@@ -8,4 +8,8 @@ export default function User({ nameValue }) {
       <p>Félicitations! Vous avez explosé vos objectifs hier 👏</p>
     </div>
   )
+}
+
+User.propTypes = {
+  nameValue: PropTypes.string,
 }
