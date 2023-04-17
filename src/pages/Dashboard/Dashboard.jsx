@@ -4,20 +4,11 @@ import {
   USER_AVERAGE_SESSIONS,
   USER_PERFORMANCE,
 } from "../../data/data.js"
-import {
-  USER_MAIN_DATA,
-  USER_ACTIVITY,
-  USER_AVERAGE_SESSIONS,
-  USER_PERFORMANCE,
-} from "../../data/data.js"
 import "../../scss/index.scss"
 
 import User from "../../components/User/User.jsx"
 import UserData from "../../components/UserData/UserData.jsx"
 import DataBarChart from "../../components/BarChart/DataBarChart.jsx"
-import DataLineChart from "../../components/LineChart/DataLineChart.jsx"
-import DataRadarChart from "../../components/RadarChart/DataRadarChart.jsx"
-import DataRadialChart from "../../components/RadialChart/DataRadialChart.jsx"
 import DataLineChart from "../../components/LineChart/DataLineChart.jsx"
 import DataRadarChart from "../../components/RadarChart/DataRadarChart.jsx"
 import DataRadialChart from "../../components/RadialChart/DataRadialChart.jsx"
@@ -68,30 +59,24 @@ export default function Dashboard() {
             <UserData
               iconValue={fire}
               dataValue={infos.keyData.calorieCount}
-              dataValue={infos.keyData.calorieCount}
               dataTitle={"Calories"}
             />
             <UserData
               iconValue={chicken}
-              dataValue={infos.keyData.proteinCount}
               dataValue={infos.keyData.proteinCount}
               dataTitle={"Proteines"}
             />
             <UserData
               iconValue={apple}
               dataValue={infos.keyData.carbohydrateCount}
-              dataValue={infos.keyData.carbohydrateCount}
               dataTitle={"Glucides"}
             />
             <UserData
               iconValue={cheeseburger}
               dataValue={infos.keyData.lipidCount}
-              dataValue={infos.keyData.lipidCount}
               dataTitle={"Lipides"}
             />
           </section>
-        ))}
-      </div>
         ))}
       </div>
     </main>
