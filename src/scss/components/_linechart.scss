@@ -15,15 +15,25 @@
   margin: 0px;
 }
 
-.recharts-cartesian-axis-line {
-  stroke: transparent;
+.recharts-line-curve {
+  fill: none;
+  stroke: url(#colorUv);
 }
-
+.recharts-layer circle {
+  fill: none;
+  stroke: none;
+  cursor: pointer;
+}
+.recharts-cartesian-axis-line,
 .recharts-cartesian-axis-tick-line {
   stroke: transparent;
 }
 
-.recharts-layer circle {
+// au survol ou click
+.recharts-tooltip-cursor {
+  stroke: transparent;
+}
+.recharts-active-dot .recharts-dot {
   fill: white;
-  stroke: none;
+  stroke: white;
 }

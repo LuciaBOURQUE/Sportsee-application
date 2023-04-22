@@ -1,6 +1,14 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts"
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts"
+import PropTypes from "prop-types"
 import "../../scss/index.scss"
-// Créer ici le PropTypes
 
 export default function DataBarChart({ barValue }) {
   const data = barValue
@@ -53,28 +61,44 @@ export default function DataBarChart({ barValue }) {
                 fill="#E60000"
               />
             </svg>
-            <span>Calories (kCal)</span>
+            <span>Calories brûlées (kCal)</span>
           </div>
         </div>
       </div>
-      <BarChart width={500} height={200} data={data}>
-        <Tooltip content={CustomTooltip} />
-        <CartesianGrid vertical={false} stroke="#ccc" strokeDasharray="2 2" />
-        <XAxis stroke="#9B9EAC" />
-        <YAxis domain={[0, "dataMax + 10"]} stroke="#9B9EAC" tickCount={3} />
-        <Bar
-          dataKey="kilogram"
-          fill="#282D30"
-          barSize={10}
-          radius={[5, 5, 0, 0]}
-        />
-        <Bar
-          dataKey="calories"
-          fill="#FF0101"
-          barSize={10}
-          radius={[5, 5, 0, 0]}
-        />
-      </BarChart>
+      <ResponsiveContainer width="100%" height={200}>
+        <BarChart data={data}>
+          <Tooltip content={CustomTooltip} />
+          <CartesianGrid vertical="" stroke="#ccc" strokeDasharray="2 2" />
+          <XAxis stroke="#9B9EAC" />
+          <YAxis
+            stroke="#9B9EAC"
+            tickCount={3}
+            YAxisId="right"
+            orientation="right"
+          />
+          <Bar
+            dataKey="kilogram"
+            fill="#282D30"
+            barSize={8}
+            radius={[5, 5, 0, 0]}
+          />
+          <Bar
+            dataKey="calories"
+            fill="#FF0101"
+            barSize={8}
+            radius={[5, 5, 0, 0]}
+          />
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   )
 }
+
+DataBarChart.propTypes = {
+  data: PropTypes.shape({
+    kilogram: PropTypes.number.isRequired,
+    calories: PropTypes.number.isRequired,
+  }),
+}
+
+//<XAxis dataKey="day" stroke="#9B9EAC" />

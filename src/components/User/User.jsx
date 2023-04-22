@@ -1,5 +1,6 @@
 import "../../scss/index.scss"
-// Créer ici le PropTypes
+import PropTypes from "prop-types"
+//`http://localhost:5000/user/:id`
 
 export default function User({ nameValue }) {
   return (
@@ -9,3 +10,30 @@ export default function User({ nameValue }) {
     </div>
   )
 }
+
+User.propTypes = {
+  nameValue: PropTypes.string,
+}
+
+/*
+
+  const [userData, setUserData] = useState({})
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    !isMounted &&
+      api.getUsers().then((json) => {
+        setUserData(json);
+        setIsMounted(true);
+      });
+  }, [isMounted]);
+
+  
+      {userData && userData.map((user, index) => {
+          return (
+            <li key={index}>
+              {user.Nom} {user.Prenom}
+            </li>
+          );
+        })}
+*/

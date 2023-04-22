@@ -1,5 +1,5 @@
 import "../../scss/index.scss"
-// Créer ici le PropTypes
+import PropTypes from "prop-types"
 
 export default function Icon({ iconValue }) {
   return (
@@ -7,4 +7,8 @@ export default function Icon({ iconValue }) {
       <img src={iconValue} alt="icon app" className="name-icon" />
     </div>
   )
+}
+
+Icon.propTypes = {
+  icon: PropTypes.symbol,
 }

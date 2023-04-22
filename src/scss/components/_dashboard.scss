@@ -22,5 +22,6 @@
   flex-direction: column;
   &__blocs {
     display: flex;
+    justify-content: space-between;
   }
 }

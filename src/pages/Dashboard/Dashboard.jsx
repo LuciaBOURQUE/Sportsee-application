@@ -1,3 +1,10 @@
+/* const {
+  USER_MAIN_DATA,
+  USER_ACTIVITY,
+  USER_AVERAGE_SESSIONS,
+  USER_PERFORMANCE,
+} = require('../data/models')*/
+
 import {
   USER_MAIN_DATA,
   USER_ACTIVITY,
@@ -47,9 +54,9 @@ export default function Dashboard() {
                 />
               </section>
             ))}
-            {USER_AVERAGE_SESSIONS.map((score) => (
-              <section key={score.userId} className="radialchart">
-                <DataRadialChart radialDataValue={score.sessions} />
+            {USER_MAIN_DATA.map((score) => (
+              <section key={score.id} className="radialchart">
+                <DataRadialChart radialDataValue={score.todayScore} />
               </section>
             ))}
           </div>

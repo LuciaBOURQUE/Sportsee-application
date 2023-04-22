@@ -1,6 +1,6 @@
 import Icon from "../Icon/Icon"
 import "../../scss/index.scss"
-// Créer ici le PropTypes
+// Créer ici le PropTypes des paramètres
 
 export default function UserData({ dataValue, dataTitle, iconValue }) {
   return (
