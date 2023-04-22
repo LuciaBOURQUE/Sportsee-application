@@ -1,6 +1,9 @@
 import "../../scss/index.scss"
 import PropTypes from "prop-types"
+<<<<<<< HEAD
 //`http://localhost:5000/user/:id`
+=======
+>>>>>>> 5f3429d8c4ea7d876003407039dad12c7caacf8b
 
 export default function User({ nameValue }) {
   return (
@@ -14,6 +17,7 @@ export default function User({ nameValue }) {
 User.propTypes = {
   nameValue: PropTypes.string,
 }
+<<<<<<< HEAD
 
 /*
 
@@ -37,3 +41,5 @@ User.propTypes = {
           );
         })}
 */
+=======
+>>>>>>> 5f3429d8c4ea7d876003407039dad12c7caacf8b

@@ -16,6 +16,7 @@
 }
 
 .recharts-line-curve {
+<<<<<<< HEAD
   fill: none;
   stroke: url(#colorUv);
 }
@@ -34,6 +35,27 @@
   stroke: transparent;
 }
 .recharts-active-dot .recharts-dot {
+=======
+  fill: none;                 
+  stroke: url(#colorUv);    
+}
+.recharts-layer circle {
+  fill: none;
+  stroke: none;
+  cursor: pointer;
+}
+.recharts-cartesian-axis-line, .recharts-cartesian-axis-tick-line {
+  stroke: transparent;
+}
+
+// au survol ou click
+.recharts-tooltip-cursor {
+  stroke: transparent;
+}
+.recharts-active-dot .recharts-dot{
+>>>>>>> 5f3429d8c4ea7d876003407039dad12c7caacf8b
   fill: white;
   stroke: white;
 }
+
+

@@ -68,6 +68,12 @@ DataLineChart.propTypes = {
       </LineChart>
     </div>
   )
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 5f3429d8c4ea7d876003407039dad12c7caacf8b
           <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
           <stop offset="50%" stopColor="#ff0000" stopOpacity={0.5} />
           <stop offset="95%" stopColor="#00ff4067 81.27%" stopOpacity={0.1} />

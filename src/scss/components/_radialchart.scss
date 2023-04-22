@@ -4,6 +4,7 @@
   padding: 20px;
   width: fit-content;
 }
+<<<<<<< HEAD
 
 .radialchart-info {
   //position: relative;
@@ -13,13 +14,29 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+=======
+/*
+.radialchart-graphic {
+  position:absolute;
+}*/
+.radialchart-info {
+  //position: relative;
+  //top: center;
+  //left: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+>>>>>>> 5f3429d8c4ea7d876003407039dad12c7caacf8b
   span {
     font-size: 24px;
     font-weight: bold;
   }
 }
+<<<<<<< HEAD
 
 /*
 .radialchart-graphic {
   position: relative;
 }*/
+=======
+>>>>>>> 5f3429d8c4ea7d876003407039dad12c7caacf8b

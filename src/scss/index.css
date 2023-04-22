@@ -2,19 +2,14 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
-/*
-#root {
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-}*/
 img {
   max-width: 100%;
 }
@@ -29,7 +24,13 @@ h2 {
   font-size: 20px;
 }
 
-p, a {
+h3 {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+p,
+a {
   font-weight: 400;
   font-size: 18px;
 }
@@ -44,11 +45,27 @@ li {
 }
 
 .dashboard {
-  background-color: aquamarine;
   position: absolute;
   top: 10%;
   left: 120px;
   padding-left: 30px;
+}
+.dashboard .user h1 {
+  margin-bottom: 0;
+}
+
+.dashboard__graphics {
+  display: flex;
+}
+
+.dashboard__recharts {
+  margin-right: 3%;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard__recharts__blocs {
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-horizontal {
@@ -82,7 +99,7 @@ li {
   background-color: #020203;
 }
 .nav-vertical .nav-icons {
-  height: 35%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -100,6 +117,7 @@ li {
 .bloc-icon {
   width: 65px;
   height: 65px;
+  margin: 10px 0;
   background-color: white;
   padding: 10px;
   border-radius: 6px;
@@ -115,12 +133,12 @@ li {
 }
 
 .user-data {
-  background-color: #FBFBFB;
-  width: 210px;
+  background-color: #fbfbfb;
+  width: 180px;
   display: flex;
   align-items: center;
   border-radius: 5px;
-  padding: 25px 20px;
+  padding: 25px 30px;
   margin-bottom: 20px;
 }
 .user-data .data-icon {
@@ -128,10 +146,13 @@ li {
   display: flex;
   justify-content: center;
   background-color: rgb(229, 229, 253);
-  margin-right: 30px;
+  margin-right: 20px;
 }
 .user-data .data-icon .bloc-icon {
   background-color: transparent;
+  margin: 0;
+  width: 50px;
+  height: 50px;
 }
 .user-data .data-icon .name-icon {
   width: 50%;
@@ -141,7 +162,124 @@ li {
 }
 .user-data .data-infos span {
   font-weight: 500;
-  color: #74798C;
+  color: #74798c;
   font-size: 14px;
   margin: 5px 0 0 0;
+}
+
+.tooltip {
+  background-color: white;
+  padding: 5px 10px;
+}
+.tooltip p {
+  font-size: 8px;
+  font-weight: 500;
+}
+
+.barchart {
+  background-color: #fbfbfb;
+  margin-bottom: 3%;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.legend-barchart {
+  display: flex;
+  justify-content: space-between;
+}
+.legend-barchart .poids-calories {
+  display: flex;
+}
+.legend-barchart .poids-calories .poids,
+.legend-barchart .poids-calories .calories {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.legend-barchart .poids-calories .poids span,
+.legend-barchart .poids-calories .calories span {
+  font-size: 14px;
+  margin: 0;
+  padding-left: 10px;
+  color: #74798c;
+}
+
+.linechart {
+  background-color: #ff0000;
+  border-radius: 5px;
+  padding: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.linechart .legend-linechart h3 {
+  color: rgba(255, 255, 255, 0.5);
+  width: 60%;
+  font-weight: 300;
+}
+
+.recharts-wrapper {
+  margin: 0px;
+}
+
+.recharts-line-curve {
+  fill: none;
+  stroke: url(#colorUv);
+}
+
+.recharts-layer circle {
+  fill: none;
+  stroke: none;
+  cursor: pointer;
+}
+
+.recharts-cartesian-axis-line, .recharts-cartesian-axis-tick-line {
+  stroke: transparent;
+}
+
+.recharts-tooltip-cursor {
+  stroke: transparent;
+}
+
+.recharts-active-dot .recharts-dot {
+  fill: white;
+  stroke: white;
+}
+
+.radarchart {
+  background-color: #000000;
+  border-radius: 5px;
+  padding: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.recharts-polygon {
+  stroke: none;
+}
+
+.recharts-polar-angle-axis-tick {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.radialchart {
+  background-color: #cde5f8;
+  border-radius: 5px;
+  padding: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+/*
+.radialchart-graphic {
+  position:absolute;
+}*/
+.radialchart-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.radialchart-info span {
+  font-size: 24px;
+  font-weight: bold;
 }/*# sourceMappingURL=index.css.map */
