@@ -25,7 +25,7 @@ export default function DataBarChart({ barValue }) {
   }
 
   return (
-    <div>
+    <section className="barchart">
       <div className="legend-barchart">
         <h3>Activité quotidienne</h3>
         <div className="poids-calories">
@@ -90,7 +90,7 @@ export default function DataBarChart({ barValue }) {
           />
         </BarChart>
       </ResponsiveContainer>
-    </div>
+    </section>
   )
 }
 
@@ -100,5 +100,3 @@ DataBarChart.propTypes = {
     calories: PropTypes.number.isRequired,
   }),
 }
-
-//<XAxis dataKey="day" stroke="#9B9EAC" />

@@ -1,9 +1,12 @@
 .linechart {
+  position: relative;
+  width: 100%;
   background-color: #ff0000;
-  border-radius: 5px;
   padding: 20px;
-  width: fit-content;
+  border-radius: 5px;
   .legend-linechart h3 {
+    position: absolute;
+    top: 0px;
     color: rgba(255, 255, 255, 0.5);
     width: 60%;
     font-weight: 300;
@@ -16,7 +19,6 @@
 }
 
 .recharts-line-curve {
-<<<<<<< HEAD
   fill: none;
   stroke: url(#colorUv);
 }
@@ -35,25 +37,6 @@
   stroke: transparent;
 }
 .recharts-active-dot .recharts-dot {
-=======
-  fill: none;                 
-  stroke: url(#colorUv);    
-}
-.recharts-layer circle {
-  fill: none;
-  stroke: none;
-  cursor: pointer;
-}
-.recharts-cartesian-axis-line, .recharts-cartesian-axis-tick-line {
-  stroke: transparent;
-}
-
-// au survol ou click
-.recharts-tooltip-cursor {
-  stroke: transparent;
-}
-.recharts-active-dot .recharts-dot{
->>>>>>> 5f3429d8c4ea7d876003407039dad12c7caacf8b
   fill: white;
   stroke: white;
 }

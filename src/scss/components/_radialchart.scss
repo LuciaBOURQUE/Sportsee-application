@@ -1,42 +1,31 @@
 .radialchart {
-  background-color: #cde5f8;
+  width: 100%;
+  position: relative;
+  background-color: #FBFBFB;
   border-radius: 5px;
   padding: 20px;
-  width: fit-content;
 }
-<<<<<<< HEAD
 
 .radialchart-info {
-  //position: relative;
-  //top: 50px;
-  //left: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-=======
-/*
-.radialchart-graphic {
-  position:absolute;
-}*/
-.radialchart-info {
-  //position: relative;
-  //top: center;
-  //left: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
->>>>>>> 5f3429d8c4ea7d876003407039dad12c7caacf8b
   span {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
   }
+  h3 {
+    color:#74798C;
+  }
 }
-<<<<<<< HEAD
 
-/*
-.radialchart-graphic {
-  position: relative;
-}*/
-=======
->>>>>>> 5f3429d8c4ea7d876003407039dad12c7caacf8b
+.recharts-radial-bar-background-sector {
+  fill:white;
+  color: blue;
+}

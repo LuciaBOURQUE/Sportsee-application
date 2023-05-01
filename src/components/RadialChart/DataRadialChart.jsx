@@ -1,32 +1,31 @@
-import { RadialBarChart, PolarAngleAxis, RadialBar } from "recharts"
+import {
+  RadialBarChart,
+  PolarAngleAxis,
+  RadialBar,
+  ResponsiveContainer,
+} from "recharts"
 import PropTypes from "prop-types"
 import "../../scss/index.scss"
 
 export default function DataRadialChart({ radialDataValue }) {
   let options = {
     style: "percent",
-    //signDisplay: "always",
     minimumFractionDigits: 0,
     maximumFractionDigits: 2,
-    //notation: "compact",
-    //currencyDisplay: "name",
   }
   let numberFormat = new Intl.NumberFormat("fr-FR", options)
   let newFormat = numberFormat.format(radialDataValue)
-
-  const data = [{ value: 12, fill: "#ff0000" }]
+  const data = [{ value: radialDataValue * 100 }]
 
   return (
-    <div>
+    <section className="radialchart">
       <div className="radialchart-info">
         <span>{newFormat}</span>
         <h3> de votre objectif</h3>
       </div>
-      <div className="radialchart-graphic">
+      <ResponsiveContainer width="100%" minWidth={185} height={200}>
         <RadialBarChart
-          width={185}
-          height={200}
-          innerRadius={50}
+          innerRadius="100%"
           outerRadius={200}
           barSize={10}
           data={data}
@@ -47,8 +46,8 @@ export default function DataRadialChart({ radialDataValue }) {
             dataKey="value"
           />
         </RadialBarChart>
-      </div>
-    </div>
+      </ResponsiveContainer>
+    </section>
   )
 }
 

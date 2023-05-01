@@ -1,20 +1,16 @@
-/* const {
-  USER_MAIN_DATA,
-  USER_ACTIVITY,
-  USER_AVERAGE_SESSIONS,
-  USER_PERFORMANCE,
-} = require('../data/models')*/
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 
 import {
-  USER_MAIN_DATA,
-  USER_ACTIVITY,
-  USER_AVERAGE_SESSIONS,
-  USER_PERFORMANCE,
-} from "../../data/data.js"
-import "../../scss/index.scss"
+  userMainData,
+  userActivityData,
+  userSessionData,
+  userPerformanceData,
+} from "../../API/Services"
 
-import User from "../../components/User/User.jsx"
-import UserData from "../../components/UserData/UserData.jsx"
+import NavVerticale from "../../components/Navbars/NavVerticale"
+import User from "../../components/User/User"
+import UserData from "../../components/UserData/UserData"
 import DataBarChart from "../../components/BarChart/DataBarChart.jsx"
 import DataLineChart from "../../components/LineChart/DataLineChart.jsx"
 import DataRadarChart from "../../components/RadarChart/DataRadarChart.jsx"
@@ -24,68 +20,94 @@ import fire from "../../assets/icons/fire.svg"
 import chicken from "../../assets/icons/chicken.svg"
 import apple from "../../assets/icons/apple.svg"
 import cheeseburger from "../../assets/icons/cheeseburger.svg"
+import "../../scss/index.scss"
 
 export default function Dashboard() {
+  const { id } = useParams()
+  const [datas, setDatas] = useState({})
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    ;(async () => {
+      try {
+        const userDatas = await userMainData(id)
+        const userActivities = await userActivityData(id)
+        const userSessions = await userSessionData(id)
+        const userPerformances = await userPerformanceData(id)
+        setDatas({ userDatas, userActivities, userSessions, userPerformances })
+
+        setIsLoading(false)
+      } catch (error) {
+        console.log(error)
+      }
+    })()
+  }, [id])
+
   return (
-    <main className="dashboard">
-      {USER_MAIN_DATA.map((user) => (
-        <header key={user.id} className="user">
-          <User nameValue={user.userInfos.firstName} />
-        </header>
-      ))}
-      <div className="dashboard__graphics">
-        <div className="dashboard__recharts">
-          {USER_ACTIVITY.map((activity) => (
-            <section key={activity.userId} className="barchart">
-              <DataBarChart barValue={activity.sessions} />
-            </section>
-          ))}
-          <div className="dashboard__recharts__blocs">
-            {USER_AVERAGE_SESSIONS.map((sessions) => (
-              <section key={sessions.userId} className="linechart">
-                <DataLineChart barValue={sessions.sessions} />
-              </section>
-            ))}
-            {USER_PERFORMANCE.map((performance) => (
-              <section key={performance.userId} className="radarchart">
-                <DataRadarChart
-                  radarValue={performance.kind}
-                  radarDataValue={performance.data}
-                />
-              </section>
-            ))}
-            {USER_MAIN_DATA.map((score) => (
-              <section key={score.id} className="radialchart">
-                <DataRadialChart radialDataValue={score.todayScore} />
-              </section>
-            ))}
-          </div>
-        </div>
-        {USER_MAIN_DATA.map((infos) => (
-          <section key={infos.id} className="section-userdata">
-            <UserData
-              iconValue={fire}
-              dataValue={infos.keyData.calorieCount}
-              dataTitle={"Calories"}
-            />
-            <UserData
-              iconValue={chicken}
-              dataValue={infos.keyData.proteinCount}
-              dataTitle={"Proteines"}
-            />
-            <UserData
-              iconValue={apple}
-              dataValue={infos.keyData.carbohydrateCount}
-              dataTitle={"Glucides"}
-            />
-            <UserData
-              iconValue={cheeseburger}
-              dataValue={infos.keyData.lipidCount}
-              dataTitle={"Lipides"}
-            />
-          </section>
-        ))}
-      </div>
-    </main>
+    <>
+      {isLoading ? (
+        "Loading..."
+      ) : (
+        <>
+          <main className="dashboard">
+            <NavVerticale />
+            <div className="dashboard__profil">
+              <header className="user">
+                <User nameValue={datas.userDatas.firstName} />
+              </header>
+              <div className="dashboard__graphics">
+                <div className="dashboard__recharts">
+                  <DataBarChart barValue={datas.userActivities.sessions} />
+                  <div className="dashboard__recharts__blocs">
+                    <DataLineChart barValue={datas.userSessions.sessions} />
+                    <DataRadarChart
+                      radarValue={datas.userPerformances.kind}
+                      radarDataValue={datas.userPerformances.data}
+                    />
+                    <DataRadialChart
+                      radialDataValue={datas.userDatas.todayScore}
+                    />
+                  </div>
+                </div>
+                <section className="section-userdata">
+                  <UserData
+                    iconValue={fire}
+                    dataValue={datas.userDatas.keyData.calorieCount}
+                    dataTitle={"Calories"}
+                    unit={"kCal"}
+                  />
+                  <UserData
+                    iconValue={chicken}
+                    dataValue={datas.userDatas.keyData.proteinCount}
+                    dataTitle={"Proteines"}
+                    unit={"g"}
+                  />
+                  <UserData
+                    iconValue={apple}
+                    dataValue={datas.userDatas.keyData.carbohydrateCount}
+                    dataTitle={"Glucides"}
+                    unit={"g"}
+                  />
+                  <UserData
+                    iconValue={cheeseburger}
+                    dataValue={datas.userDatas.keyData.lipidCount}
+                    dataTitle={"Lipides"}
+                    unit={"g"}
+                  />
+                </section>
+              </div>
+            </div>
+          </main>
+        </>
+      )}
+    </>
   )
 }
+
+/*
+        if (!userDatas.id === id) {
+          return navigate("/Error")
+        }
+        //console.log(userDatas.id)
+        //console.log(id)
+*/

@@ -1,23 +1,16 @@
-.navigation {
-    position: relative;
+.dashboard {
+  display: flex;
+  &__profil {
+    width: 100%;
+    margin: 2% 3% 0 5%;
   }
-  .dashboard {
-    //background-color: aquamarine;
-    position: absolute;
-    top: 10%;
-    left: 120px;
-    padding-left: 30px;
-    .user h1 {
-      margin-bottom: 0;
-    }
-  }
-  
-  .dashboard__graphics {
+  &__graphics {
+    width: 100%;
     display: flex;
     justify-content: space-between;
   }
-  
-  .dashboard__recharts {
+  &__recharts {
+    width: 100%;
     margin-right: 3%;
     display: flex;
     flex-direction: column;
@@ -26,3 +19,11 @@
       justify-content: space-between;
     }
   }
+}
+
+.user h1 {
+  margin: 0;
+  span {
+    color: #ff0000;
+  }
+}

@@ -1,8 +1,17 @@
 .tooltip {
-  background-color: white;
   padding: 5px 10px;
   p {
     font-size: 8px;
     font-weight: 500;
   }
+}
+
+// Paramètres background du BarChart et LineChart
+.barchart .tooltip {
+  background-color: #ff0000;
+  color: white;
+}
+.linechart .tooltip {
+  background-color: white;
+  color: #282D30;
 }
