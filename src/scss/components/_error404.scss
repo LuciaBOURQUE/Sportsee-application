@@ -1,0 +1,25 @@
+.error-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6% 0;
+    h1 {
+    font-weight: 700;
+    font-size: 288px;
+    color: #ff0000;
+    margin: 0;
+    text-align: center;
+    }
+    h2 {
+    font-weight: lighter;
+    color: #74798c;
+    text-align: center;
+    }
+    .btn-home {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+    }
+}
+    

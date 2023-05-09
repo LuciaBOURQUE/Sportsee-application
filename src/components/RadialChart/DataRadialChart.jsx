@@ -19,9 +19,10 @@ export default function DataRadialChart({ radialDataValue }) {
 
   return (
     <section className="radialchart">
+      <h3>Score</h3>
       <div className="radialchart-info">
         <span>{newFormat}</span>
-        <h3> de votre objectif</h3>
+        <h3 className="radialchart-info__text"> de votre objectif</h3>
       </div>
       <ResponsiveContainer width="100%" minWidth={185} height={200}>
         <RadialBarChart

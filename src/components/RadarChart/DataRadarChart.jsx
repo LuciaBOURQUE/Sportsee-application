@@ -43,5 +43,6 @@ DataRadarChart.propTypes = {
   data: PropTypes.shape({
     value: PropTypes.number.isRequired,
     kind: PropTypes.number.isRequired,
+    label: PropTypes.string.isRequired,
   }),
 }

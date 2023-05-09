@@ -2,9 +2,8 @@ import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts"
 import PropTypes from "prop-types"
 import "../../scss/index.scss"
 
-export default function DataLineChart({ barValue }) {
-  const data = barValue
-  const dataDay = ["L", "M", "M", "J", "V", "S", "D"]
+export default function DataLineChart({ lineValue }) {
+  const data = lineValue
 
   function CustomTooltip({ active, payload }) {
     if (active) {
@@ -32,7 +31,7 @@ export default function DataLineChart({ barValue }) {
           <Tooltip content={CustomTooltip} />
           <XAxis
             stroke="rgba(255, 255, 255, 0.5)"
-            data={dataDay}
+            dataKey="day"
             fontSize="12px"
           />
           <Line
@@ -51,7 +50,7 @@ export default function DataLineChart({ barValue }) {
 
 DataLineChart.propTypes = {
   data: PropTypes.shape({
+    sessionLength: PropTypes.string,
     day: PropTypes.number.isRequired,
-    sessionLength: PropTypes.number.isRequired,
   }),
 }

@@ -5,40 +5,38 @@
   padding: 20px;
   border-radius: 5px;
   .legend-linechart h3 {
-    position: absolute;
-    top: 0px;
-    color: rgba(255, 255, 255, 0.5);
-    width: 60%;
-    font-weight: 300;
+  position: absolute;
+  top: 0px;
+  color: rgba(255, 255, 255, 0.5);
+  width: 60%;
+  font-weight: 300;
   }
-}
-
-// Paramètres des éléments du graphique
-.recharts-wrapper {
+  }
+  
+  // Paramètres des éléments du graphique
+  .recharts-wrapper {
   margin: 0px;
-}
-
-.recharts-line-curve {
+  }
+  
+  .recharts-line-curve {
   fill: none;
   stroke: url(#colorUv);
-}
-.recharts-layer circle {
+  }
+  .recharts-layer circle {
   fill: none;
   stroke: none;
   cursor: pointer;
-}
-.recharts-cartesian-axis-line,
-.recharts-cartesian-axis-tick-line {
+  }
+  .recharts-cartesian-axis-line,
+  .recharts-cartesian-axis-tick-line {
   stroke: transparent;
-}
-
-// au survol ou click
-.recharts-tooltip-cursor {
+  }
+  
+  // au survol ou click
+  .recharts-tooltip-cursor {
   stroke: transparent;
-}
-.recharts-active-dot .recharts-dot {
+  }
+  .recharts-active-dot .recharts-dot {
   fill: white;
   stroke: white;
-}
-
-
+  }

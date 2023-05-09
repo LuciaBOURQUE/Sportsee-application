@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 
 import {
   userMainData,
@@ -9,6 +9,7 @@ import {
 } from "../../API/Services"
 
 import NavVerticale from "../../components/Navbars/NavVerticale"
+import NavHeader from "../../components/Navbars/NavHeader"
 import User from "../../components/User/User"
 import UserData from "../../components/UserData/UserData"
 import DataBarChart from "../../components/BarChart/DataBarChart.jsx"
@@ -24,6 +25,7 @@ import "../../scss/index.scss"
 
 export default function Dashboard() {
   const { id } = useParams()
+  const navigate = useNavigate()
   const [datas, setDatas] = useState({})
   const [isLoading, setIsLoading] = useState(true)
 
@@ -34,14 +36,15 @@ export default function Dashboard() {
         const userActivities = await userActivityData(id)
         const userSessions = await userSessionData(id)
         const userPerformances = await userPerformanceData(id)
-        setDatas({ userDatas, userActivities, userSessions, userPerformances })
 
+        setDatas({ userDatas, userActivities, userSessions, userPerformances })
         setIsLoading(false)
       } catch (error) {
-        console.log(error)
+        //console.log(error)
+        return navigate("/*")
       }
     })()
-  }, [id])
+  }, [id, navigate])
 
   return (
     <>
@@ -49,6 +52,7 @@ export default function Dashboard() {
         "Loading..."
       ) : (
         <>
+          <NavHeader />
           <main className="dashboard">
             <NavVerticale />
             <div className="dashboard__profil">
@@ -59,7 +63,7 @@ export default function Dashboard() {
                 <div className="dashboard__recharts">
                   <DataBarChart barValue={datas.userActivities.sessions} />
                   <div className="dashboard__recharts__blocs">
-                    <DataLineChart barValue={datas.userSessions.sessions} />
+                    <DataLineChart lineValue={datas.userSessions.sessions} />
                     <DataRadarChart
                       radarValue={datas.userPerformances.kind}
                       radarDataValue={datas.userPerformances.data}
@@ -103,11 +107,3 @@ export default function Dashboard() {
     </>
   )
 }
-
-/*
-        if (!userDatas.id === id) {
-          return navigate("/Error")
-        }
-        //console.log(userDatas.id)
-        //console.log(id)
-*/

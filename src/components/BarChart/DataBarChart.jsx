@@ -69,7 +69,7 @@ export default function DataBarChart({ barValue }) {
         <BarChart data={data}>
           <Tooltip content={CustomTooltip} />
           <CartesianGrid vertical="" stroke="#ccc" strokeDasharray="2 2" />
-          <XAxis stroke="#9B9EAC" />
+          <XAxis stroke="#9B9EAC" dataKey="day" />
           <YAxis
             stroke="#9B9EAC"
             tickCount={3}

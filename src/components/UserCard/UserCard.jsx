@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "../../scss/index.scss"
-import PropTypes from "prop-types" // A FAIRE !
+import PropTypes from "prop-types"
 
 export default function UserCard({ avatarProfil, nameProfil, ageProfil, id }) {
   return (
@@ -16,5 +16,8 @@ export default function UserCard({ avatarProfil, nameProfil, ageProfil, id }) {
 }
 
 UserCard.propTypes = {
-  data: PropTypes.shape({}),
+  avatarProfil: PropTypes.string.isRequired,
+  nameProfil: PropTypes.string.isRequired,
+  ageProfil: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 }

@@ -1,12 +1,15 @@
 .radialchart {
   width: 100%;
   position: relative;
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
   border-radius: 5px;
   padding: 20px;
-}
-
-.radialchart-info {
+  h3 {
+  margin-top: 0px;
+  }
+  }
+  
+  .radialchart-info {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -17,15 +20,15 @@
   justify-content: center;
   align-items: center;
   span {
-    font-size: 26px;
-    font-weight: bold;
+  font-size: 26px;
+  font-weight: bold;
   }
-  h3 {
-    color:#74798C;
+  &__text {
+  color: #74798c;
   }
-}
-
-.recharts-radial-bar-background-sector {
-  fill:white;
+  }
+  
+  .recharts-radial-bar-background-sector {
+  fill: white;
   color: blue;
-}
+  }

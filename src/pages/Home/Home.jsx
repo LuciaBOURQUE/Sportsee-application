@@ -1,7 +1,7 @@
 import React from "react"
 import UserCard from "../../components/UserCard/UserCard"
 
-import Man1 from "../../assets/icons/man1.jpg"
+import Man from "../../assets/icons/man.jpg"
 import Woman from "../../assets/icons/woman.jpg"
 import "../../scss/index.scss"
 
@@ -11,7 +11,7 @@ export default function Home() {
       <h2 className="connexion-profil__title">Veuillez vous identifier</h2>
       <div className="cards-profil">
         <UserCard
-          avatarProfil={Man1}
+          avatarProfil={Man}
           nameProfil="Karl Dovineau"
           ageProfil="31"
           id="12"

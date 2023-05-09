@@ -1,5 +1,10 @@
 import axios from "axios"
 
+/**
+ * Get the main information of the user (name, personal informations)
+ * @param {number} id allows to retrieve the data related to the id
+ * @returns {Promise} returns the object with the information
+ */
 export const getMainData = async (id) => {
   try {
     const response = await axios.get(`http://localhost:5000/user/${id}`)
@@ -10,6 +15,8 @@ export const getMainData = async (id) => {
   }
 }
 
+/* Get the data related to the activity
+of the user's week (calories, kilograms and days) */
 export const getUserActivityData = async (userId) => {
   try {
     const response = await axios.get(
@@ -22,6 +29,7 @@ export const getUserActivityData = async (userId) => {
   }
 }
 
+/* Get the data related to session times (minutes) per day */
 export const getUserSessionData = async (userId) => {
   try {
     const response = await axios.get(
@@ -34,6 +42,7 @@ export const getUserSessionData = async (userId) => {
   }
 }
 
+/* Get the data related to user performance */
 export const getUserPerformanceData = async (userId) => {
   try {
     const response = await axios.get(
