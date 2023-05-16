@@ -1,5 +1,6 @@
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
+[![forthebadge](https://forthebadge.com/generator/?plabel=STYLES&slabel=SCSS&pbg=%23FFBEC9&sbg=%23EA4560&ptext=%23C13B3A)
+[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)
 
 # SportSee - Analytics Dashboard
 
@@ -18,7 +19,7 @@ The user profile page has been completely revised and will allow the user to fol
 ## Prerequisites
 
 - React (version 18.2.0)
-- NodeJS (v19.1.0)
+- Node (v19.1.0)
 - Docker (version 20.10.23)
 - Recharts (v2.5.0)
 
