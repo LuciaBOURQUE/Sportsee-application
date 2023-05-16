@@ -1,5 +1,5 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
-[![forthebadge](https://forthebadge.com/generator/?plabel=STYLES&slabel=SCSS&pbg=%23FFBEC9&sbg=%23EA4560&ptext=%23C13B3A)
+
 [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)
 
 # SportSee - Analytics Dashboard
@@ -10,7 +10,7 @@ The user profile page has been completely revised and will allow the user to fol
 ## Technologies
 
 - JS
-- SCSS
+  ![- SCSS](https://forthebadge.com/generator/?plabel=STYLES&slabel=SCSS&pbg=%23FFBEC9&sbg=%23EA4560&ptext=%23C13B3A)
 - HTML
 - React
 - Recharts
