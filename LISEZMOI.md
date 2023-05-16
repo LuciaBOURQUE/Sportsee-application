@@ -1,5 +1,4 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
-
 [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)
 
 # SportSee - Analytics Dashboard
@@ -10,7 +9,7 @@ The user profile page has been completely revised and will allow the user to fol
 ## Technologies
 
 - JS
-  ![- SCSS](https://forthebadge.com/generator/?plabel=STYLES&slabel=SCSS&pbg=%23FFBEC9&sbg=%23EA4560&ptext=%23C13B3A)
+- ![SCSS](https://forthebadge.com/generator/?plabel=STYLES&slabel=SCSS&pbg=%23FFBEC9&sbg=%23EA4560&ptext=%23C13B3A)
 - HTML
 - React
 - Recharts
@@ -18,14 +17,14 @@ The user profile page has been completely revised and will allow the user to fol
 
 ## Prerequisites
 
-- React (version 18.2.0)
-- Node (v19.1.0)
-- Docker (version 20.10.23)
-- Recharts (v2.5.0)
+- **React** (version 18.2.0)
+- **Node** (v19.1.0)
+- **Docker** (version 20.10.23)
+- **Recharts** (v2.5.0)
 
 ## Start project
 
-1. Backend: For this project you will need to launch the micro Api, to follow the procedure please follow the steps in ![this link](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
+1. Backend: For this project you will need to launch the micro Api, to follow the procedure please follow the steps in this **[link](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)**
 1. Clone this repository with this command: git clone https://github.com/LuciaBOURQUE/Sportsee.git
 1. Install the dependencies with npm npm install or with yarn yarn install
 1. Frontend: open a new terminal, then run the yarn start command will allow you to run the application on http://localhost:3001
