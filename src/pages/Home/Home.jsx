@@ -22,6 +22,12 @@ export default function Home() {
           ageProfil="34"
           id="18"
         />
+        <UserCard
+          avatarProfil={Woman}
+          nameProfil="Mock user"
+          ageProfil="27"
+          id="mock"
+        />
       </div>
     </main>
   )
