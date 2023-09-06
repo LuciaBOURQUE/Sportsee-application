@@ -1,13 +1,10 @@
 export default class userActivityModel {
   constructor(data) {
     this.userId = data.userId
-    //this.date = data.sessions.day
-    this.sessions = data.sessions.map((session) => ({
+    this.sessions = data.sessions.map((session, day) => ({
       kilogram: session.kilogram,
       calories: session.calories,
-      date: session.day,
-      day: this.newDay(),
-      //day: index + 1,
+      day: new Date(session.day).getDate(),
     }))
   }
   newDay() {

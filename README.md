@@ -25,11 +25,11 @@ SportSee is a startup dedicated to sports coaching. The purpose of the exercise 
 1. BACKEND
 
    - For this project you will need to launch the micro Api, to follow the procedure please follow the steps in this **[link](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)**
-   - Open a new terminal on this file, **`yarn install`** then run the command **`yarn dev`** to run the micro API, it will open on http://localhost:5000
+   - Open a new terminal on this file, then run the command **`yarn install`** and **`yarn dev`** to run the micro API, it will open on http://localhost:5000
 
 2. FRONTEND
    - Clone this repository with this command : **`git clone https://github.com/LuciaBOURQUE/Sportsee.git`**
-   - Open a new terminal on this file, then run the command **`yarn start`** it will allow you to run the application on http://localhost:3000
+   - Open a new terminal on this file, then run the command **`yarn install`** and **`yarn start`** it will allow you to run the application on http://localhost:3000
 
 ## Author
 
