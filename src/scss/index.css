@@ -44,7 +44,7 @@ li, a {
 }
 .dashboard__profil {
   width: 100%;
-  margin: 2% 3% 0 5%;
+  margin: 2% 3% 0 3%;
 }
 .dashboard__graphics {
   width: 100%;
@@ -97,7 +97,7 @@ li, a {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 120px;
+  width: 90px;
   height: 100vh;
   background-color: #020203;
 }

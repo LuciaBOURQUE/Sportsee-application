@@ -23,6 +23,7 @@ export const getUserActivityData = async (userId) => {
       `http://localhost:5000/user/${userId}/activity`
     )
     const userActivityData = response.data
+    console.log(userActivityData)
     return userActivityData.data
   } catch (error) {
     console.log(error)
